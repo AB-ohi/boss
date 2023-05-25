@@ -27,7 +27,7 @@ const NavBer = () => {
       <li>
         {user ? (
           <>
-            <button onClick={handelLogout} className="btn btn-active btn-ghost">Button</button>
+            <button onClick={handelLogout} className="btn btn-active btn-ghost">Log out</button>
           </>
         ) : (
           <>

@@ -89,14 +89,9 @@ const Login = () => {
                     type="text"
                     name="captcha"
                     placeholder="type captcha"
+                    onBlur={handelValidateCaptcha}
                     className="input input-bordered"
                   />
-                  <button
-                    onChange={handelValidateCaptcha}
-                    className="btn btn-outline btn-xs mt-5"
-                  >
-                    VALIDATE
-                  </button>
                 </div>
                 <div className="form-control mt-6">
                   <input
