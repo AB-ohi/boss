@@ -3,14 +3,18 @@ import { Link } from "react-router-dom";
 import orderImg from "../../../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
+import { FaShoppingCart } from 'react-icons/fa';
+import useCart from "../../../Hooks/useCart";
 
 const NavBer = () => {
   const { user, logOut } = useContext(AuthContext);
-  const handelLogout = () =>{
+  const [cart] = useCart()
+  console.log(cart)
+  const handelLogout = () => {
     logOut()
-    .then(()=>{})
-    .catch(error => console.log(error))
-  }
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   const NavList = (
     <>
       <li>
@@ -20,14 +24,26 @@ const NavBer = () => {
         <Link to="/menu">OUR MENU</Link>
       </li>
       <li>
+        <Link to="/secret">Secret</Link>
+      </li>
+      <li>
         <Link to="/order/pizza">
           Our Shop <img className="w-14" src={orderImg} alt="" />
         </Link>
       </li>
       <li>
+        <Link to="/">
+          <button className="btn gap-2">
+            <FaShoppingCart></FaShoppingCart>
+            <div className="badge badge-secondary">+{cart?.length || 0}</div>
+          </button>
+        </Link>
+      </li>
+      <li>
         {user ? (
           <>
-            <button onClick={handelLogout} className="btn btn-active btn-ghost">Log out</button>
+            <Link onClick={handelLogout}>Log out</Link>
+            <p>{user?.displayName}</p>
           </>
         ) : (
           <>
