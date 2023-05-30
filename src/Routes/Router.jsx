@@ -8,6 +8,8 @@ import Login from "../page/Login/Login";
 import SingUp from "../page/SingUp/SingUp";
 import Secret from "../page/Shared/Secret/Secret";
 import PrivetRoute from "./PrivetRoute";
+import DashBoard from "../Layout/DashBoard";
+import MyCart from "../page/DashBoard/MyCart/MyCart";
 
 export const router = createBrowserRouter([
     {
@@ -40,4 +42,14 @@ export const router = createBrowserRouter([
         }
       ]
     },
+    {
+      path:'dashboard',
+      element:<DashBoard></DashBoard>,
+      children:[
+        {
+          path:'mycart',
+          element:<MyCart></MyCart>
+        }
+      ]
+    }
   ]);
