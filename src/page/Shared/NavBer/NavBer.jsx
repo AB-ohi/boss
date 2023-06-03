@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import orderImg from "../../../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../Hooks/useCart";
 
 const NavBer = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [cart] = useCart()
-  console.log(cart)
+  const [cart] = useCart();
+  console.log(cart);
   const handelLogout = () => {
     logOut()
       .then(() => {})
@@ -27,9 +27,7 @@ const NavBer = () => {
         <Link to="/secret">Secret</Link>
       </li>
       <li>
-        <Link to="/order/pizza">
-          Our Shop <img className="w-14" src={orderImg} alt="" />
-        </Link>
+        <Link to="/order/pizza">Our Shop</Link>
       </li>
       <li>
         <Link to="/dashboard/mycart">
@@ -43,7 +41,6 @@ const NavBer = () => {
         {user ? (
           <>
             <Link onClick={handelLogout}>Log out</Link>
-            <p>{user?.displayName}</p>
           </>
         ) : (
           <>
@@ -77,7 +74,7 @@ const NavBer = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu sm:text-black menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               {NavList}
             </ul>
@@ -91,11 +88,23 @@ const NavBer = () => {
           <ul className="menu menu-horizontal px-1">{NavList}</ul>
         </div>
         <div className="navbar-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="flex items-center gap-3">
+              {user ? (
+                <>
+                  <p>{user?.displayName}</p>
+                </>
+              ) : (
+                <>
+                </>
+              )}
             <div className="w-10 rounded-full">
-              <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              {user?.photoURL ? (
+                <img className="rounded-full" src={user?.photoURL}></img>
+              ) : (
+                <img className="rounded-full" src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg" />
+              )}
             </div>
-          </label>
+          </div>
         </div>
       </div>
     </div>

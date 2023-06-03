@@ -8,6 +8,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const [disabled, setDisable] = useState(true);
@@ -35,9 +36,8 @@ const Login = () => {
       const user = result.user;
       console.log(user);
       Swal.fire({
-        position: 'top-end',
         icon: 'success',
-        title: 'Your work has been saved',
+        title: '',
         showConfirmButton: false,
         timer: 1500
       })
@@ -109,9 +109,10 @@ const Login = () => {
                   />
                 </div>
               </form>
-              <p>
-                New here?<Link to="/singUp">Create a New Account</Link>
+              <p className="text-center">
+                New here?<Link to="/singUp" className="text-purple-700">Create a New Account</Link>
               </p>
+              <SocialLogin></SocialLogin>
             </div>
           </div>
         </div>

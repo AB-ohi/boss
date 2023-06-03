@@ -10,6 +10,10 @@ import Secret from "../page/Shared/Secret/Secret";
 import PrivetRoute from "./PrivetRoute";
 import DashBoard from "../Layout/DashBoard";
 import MyCart from "../page/DashBoard/MyCart/MyCart";
+import AllUser from "../page/DashBoard/AllUser/AllUser";
+import AddItem from "../page/DashBoard/AddItem/AddItem";
+import AdminRoute from "./AdminRoute";
+import ManageItems from "../page/DashBoard/ManageItems/ManageItems";
 
 export const router = createBrowserRouter([
     {
@@ -44,12 +48,24 @@ export const router = createBrowserRouter([
     },
     {
       path:'dashboard',
-      element:<DashBoard></DashBoard>,
+      element:<PrivetRoute><DashBoard></DashBoard></PrivetRoute>,
       children:[
         {
           path:'mycart',
           element:<MyCart></MyCart>
-        }
+        },
+        {
+          path:'allUser',
+          element:<AllUser></AllUser>
+        },
+        {
+          path:'addItem',
+          element:<AdminRoute><AddItem></AddItem></AdminRoute>
+        },
+        {
+          path:'manageItems',
+          element:<AdminRoute><ManageItems></ManageItems></AdminRoute>
+        },
       ]
     }
   ]);
