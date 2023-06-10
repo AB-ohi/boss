@@ -14,7 +14,7 @@ const SingUp = () => {
     formState: { errors },
   } = useForm();
 
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+   
   const navigate = useNavigate();
   const onSubmit = (data) => {
     console.log(data);

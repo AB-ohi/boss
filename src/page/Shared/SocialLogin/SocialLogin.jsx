@@ -25,9 +25,6 @@ const SocialLogin = () => {
                 navigate(from, { replace: true });
             });
 
-
-
-
             
         })
     }

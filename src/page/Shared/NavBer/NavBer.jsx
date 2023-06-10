@@ -5,9 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../Hooks/useCart";
+import useAdmin from "../../../Hooks/useAdmin";
 
 const NavBer = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [isAdmin] = useAdmin()
   const [cart] = useCart();
   console.log(cart);
   const handelLogout = () => {
@@ -23,9 +25,12 @@ const NavBer = () => {
       <li>
         <Link to="/menu">OUR MENU</Link>
       </li>
-      <li>
-        <Link to="/secret">Secret</Link>
-      </li>
+     
+        {
+          isAdmin? <li><Link to= "/dashboard/adminHome" >Dashboard</Link></li>:
+          <li><Link to= "/dashboard/userHome" >Dashboard</Link></li>
+        }
+     
       <li>
         <Link to="/order/pizza">Our Shop</Link>
       </li>
@@ -101,7 +106,7 @@ const NavBer = () => {
               {user?.photoURL ? (
                 <img className="rounded-full" src={user?.photoURL}></img>
               ) : (
-                <img className="rounded-full" src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg" />
+                <img className="rounded-full" src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg" />
               )}
             </div>
           </div>

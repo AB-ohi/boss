@@ -1,32 +1,119 @@
 [
     {
-        "_id": "643010e0f5a7e52ce1e8fa65",
-        "name": "Jane Doe",
-        "details": "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "rating": 3
+        "bucket": "Guitar Basics",
+        "image": "https://i.ibb.co/bP5xBk7/pexels-pixabay-33597.jpg",
+        "name": "Guitar Basics",
+        "instructor": "John Smith",
+        "available_seats": 10,
+        "price": 50,
+        "category": "popular"
     },
     {
-        "_id": "643010f9f5a7e52ce1e8fa66",
-        "name": "John Doe",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
-        "rating": 2
+        "bucket": "Piano Fundamentals",
+        "image": "https://i.ibb.co/dPpx9k4/photo-1561014816-50ce5acb5e73.jpg",
+        "name": "Piano Fundamentals",
+        "instructor": "Sarah Johnson",
+        "available_seats": 8,
+        "price": 60,
+        "category": "popular"
     },
     {
-        "_id": "6430110af5a7e52ce1e8fa67",
-        "name": "MJ Doe",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
-        "rating": 5
+        "bucket": "Vocal Training",
+        "image": "https://i.ibb.co/zGDf0v3/images-1.jpg",
+        "name": "Vocal Training",
+        "instructor": "Emily Davis",
+        "available_seats": 12,
+        "price": 45,
+        "category": "salad"
     },
     {
-        "_id": "64301123f5a7e52ce1e8fa68",
-        "name": "Sarah Smith",
-        "details": "I found the product to be incredibly useful and easy to use. The interface is intuitive, and it has all the features I need. Highly recommend it!",
-        "rating": 4
+        "bucket": "Drumming 101",
+        "image": "https://i.ibb.co/Mn3Qp4d/image1-2.png",
+        "name": "Drumming 101",
+        "instructor": "Michael Thompson",
+        "available_seats": 6,
+        "price": 55,
+        "category": "salad"
     },
     {
-        "_id": "6430113af5a7e52ce1e8fa69",
-        "name": "Robert Johnson",
-        "details": "This is by far the best service I have ever used. The customer support is outstanding, and the product itself is top-notch. I couldn't be happier!",
-        "rating": 5
+        "bucket": "Violin for Beginners",
+        "image": "https://i.ibb.co/b1wyGs2/violin-374096-1280.jpg",
+        "name": "Violin for Beginners",
+        "instructor": "Jennifer Lee",
+        "available_seats": 5,
+        "price": 70,
+        "category": "popular"
+    },
+    {
+        "bucket": "Jazz Ensemble",
+        "image": "https://i.ibb.co/MBdmQf0/b7cccdef2c12780a430b8bac94e930db.jpg",
+        "name": "Jazz Ensemble",
+        "instructor": "David Miller",
+        "available_seats": 10,
+        "price": 65,
+        "category": "salad"
+    },
+    {
+        "bucket": "Songwriting Workshop",
+        "image": "https://i.ibb.co/7N8RXpB/seo-songwriting-basics-featured.jpg",
+        "name": "Songwriting Workshop",
+        "instructor": "Rebecca Anderson",
+        "available_seats": 8,
+        "price": 75,
+        "category": "popular"
+    },
+    {
+        "bucket": "Music Theory Masterclass",
+        "image": "https://i.ibb.co/fGHP5HC/8babe8628e9471ae5f962d112775073c1ae3924ccbc49d6c149c90f8c168a233-RI-SX720-FMjpg.jpg",
+        "name": "Music Theory Masterclass",
+        "instructor": "Robert Wilson",
+        "available_seats": 15,
+        "price": 50,
+        "category": "salad"
+    },
+    {
+        "bucket": "Saxophone Essentials",
+        "image": "saxophone.jpg",
+        "name": "https://i.ibb.co/9b0TjhG/6928c9ad47efeb77092319fde9076c9d.jpg",
+        "instructor": "Daniel Hughes",
+        "available_seats": 7,
+        "price": 55,
+        "category": "salad"
+    },
+    {
+        "bucket": "Electronic Music Production",
+        "image": "music_production.jpg",
+        "name": "https://i.ibb.co/4m3zjJM/download.jpg",
+        "instructor": "Laura Thompson",
+        "available_seats": 10,
+        "price": 80,
+        "category": "salad"
+    },
+    {
+        "bucket": "Flute Mastery",
+        "image": "flute.jpg",
+        "name": "https://i.ibb.co/gmmv9Hx/a.png",
+        "instructor": "Samantha Evans",
+        "available_seats": 6,
+        "price": 60,
+        "category": "salad"
+    },
+    {
+        "bucket": "Choir Harmony",
+        "image": "https://i.ibb.co/F8wK9cM/images-2.jpg",
+        "name": "Choir Harmony",
+        "instructor": "Matthew Turner",
+        "available_seats": 12,
+        "price": 40,
+        "category": "popular"
+    },
+    {
+        "bucket": "Bass Guitar Basics",
+        "image": "https://i.ibb.co/TYc4KSD/360-F-131104281-WEC578-RSJW7-Py-Q9yll8i-RZa-H6-UNMev-L1.jpg",
+        "name": "Bass Guitar Basics",
+        "instructor": "Brian Adams",
+        "available_seats": 5,
+        "price":60,
+        "category": "popular"
     }
 ]
